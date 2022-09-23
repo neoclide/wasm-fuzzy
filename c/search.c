@@ -3,13 +3,6 @@
 #include "mbyte.h"
 #include "strings.h"
 
-typedef struct {
-  int idx; // used for stable sort
-  listitem_T *item;
-  int score;
-  list_T *lmatchpos;
-} fuzzyItem_T;
-
 // bonus for adjacent matches; this is higher than SEPARATOR_BONUS so that
 // matching a whole word is preferred.
 #define SEQUENTIAL_BONUS 40
