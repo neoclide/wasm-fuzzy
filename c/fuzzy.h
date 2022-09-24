@@ -1,9 +1,6 @@
 #ifndef FUZZY__H
 # define FUZZY__H
 
-#include <stdlib.h>
-#include <string.h>
-#include <stddef.h>
 #include <string.h>
 #define NUL '\000'
 #define MAX_FUZZY_MATCHES	256

@@ -3,7 +3,7 @@ SYSROOT=$(SDK)/share/wasi-sysroot
 
 CC=$(SDK)/bin/clang
 LD=$(SDK)/bin/wasm-ld
-LDFLAGS=-s -S -O 3 --export=malloc --export=free --export=fuzzyMatch --no-entry --allow-undefined -L$(SYSROOT)/lib/wasm32-wasi -lc -lm
+LDFLAGS=-s -S -O3 --export=malloc --export=free --export=fuzzyMatch --no-entry --allow-undefined -L$(SYSROOT)/lib/wasm32-wasi -lc -lm
 
 WASM2WAT=/usr/local/share/wabt-1.0.29/bin/wasm2wat
 
@@ -22,7 +22,7 @@ $(target).wasm: $(objects)
 	$(LD) $(objects) $(LDFLAGS) -o $(target).wasm
 	
 c/%.bc: c/%.c
-	$(CC) -c -emit-llvm -Oz $< -o $@
+	$(CC) -c -nostdlib -emit-llvm -Oz $< -o $@
 
 clean:
 	rm -f $(target).wasm

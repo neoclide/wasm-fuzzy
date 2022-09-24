@@ -1,7 +1,5 @@
 #include "fuzzy.h"
-#include "mbyte.h"
 #include "search.h"
-#include "strings.h"
 
 __attribute__((used)) int fuzzyMatch(char_u *str, char_u *pattern,
                                      int_u *matches, int matchseq) {
