@@ -1,6 +1,7 @@
 ## Wasm-fuzzy
 
 Wasm module for fuzzy match with native performance.
+
 C code mostly form source code of vim in `src/search.c`.
 
 ## Build
