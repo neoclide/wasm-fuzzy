@@ -7,7 +7,7 @@ LDFLAGS=-s -S -O3 --export=malloc --export=free --no-entry --allow-undefined -L$
 
 WASM2WAT=/usr/local/share/wabt-1.0.29/bin/wasm2wat
 
-sources = c/strings.c c/mbyte.c c/alloc.c c/search.c c/fuzzy.c
+sources = c/fuzzy.c
 objects = $(sources:%.c=%.bc)
 target = fuzzy
 
