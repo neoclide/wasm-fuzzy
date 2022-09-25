@@ -1,0 +1,2 @@
+--target=wasm32-unknown-unknown-wasm
+--sysroot=/usr/local/share/wasi-sdk-16.0/share/wasi-sysroot
